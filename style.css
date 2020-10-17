@@ -7,6 +7,8 @@
     --bg-gray: #f2f2f2;
     --blue-text: #2d9cd8;
     --red-text: #eb5757;
+    --green-text: #27AE60;
+
 }
 *{box-sizing: border-box;}
 html, body{
@@ -83,7 +85,7 @@ nav{
     margin-block-start: 0.5rem;
     margin-block-end: 0.5rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.2rem;
     width: 65vw;
 }
@@ -138,7 +140,100 @@ nav{
     margin-block-start: 0.5rem;
     margin-block-end: 0.5rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.2rem;
     width: 65vw;
+}
+.services-card{
+    max-width: 350px;
+    padding: 5%;
+    border-radius: 12px;
+    background-color: #f7f7f783;
+    margin-bottom: 10%;
+
+}
+.services-card:hover{
+    box-shadow: 0 5px 20px #dadada;
+}
+.services-card__icon{
+    height: 67px;
+    width: 67px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: var(--bg-gray);
+    border-radius: 16px;
+}
+.services-card__icon--blue{background-color: var(--blue-text);}
+.services-card__icon--green{background-color: var(--green-text);}
+.services-card__icon--red{background-color: var(--red-text);}
+.services-card__title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+}
+.services-card__desc{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--description-gray);
+}
+.services-card__btn{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--btntext-gray);
+    background-color: #E0E0E0;
+    border-radius: 12px;
+    border: none;
+    padding: 10px;
+}
+.services-card__btn:hover, .services-card__btn:active{
+    background-color: var(--blue-text);
+    color: white;
+}
+/*design*/
+.design-h1{
+    margin-block-start: 0.5rem;
+    margin-block-end: 0.5rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    width: 65vw;
+}
+
+.card-deck{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+}
+.card-img{
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 24px;
+}
+.card-title{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--btntext-gray);
+    padding-top: 5%;
+}
+.card-desc{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+}
+.design-more{
+    display: flex;
+    color: var(--blue-text);
 }
