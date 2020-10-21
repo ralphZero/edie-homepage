@@ -19,6 +19,14 @@ html, body{
 body{
     font-family: 'Poppins', sans-serif;
     color: var(--title-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@media screen and (min-width:600px){
+    body{
+        padding: 0 5vw;
+    }
 }
 nav{
     display: flex;
@@ -48,11 +56,7 @@ nav{
     margin-bottom: 1px;
     padding: 0 5vw;
 }
-/*.nav-list__item{
-    float: left;
-}*/
 .nav-list__link{
-    display: block;
     text-decoration: none;
     /*text-align: center;*/
     display: block;
@@ -67,6 +71,32 @@ nav{
     font-size: 24px;
     border: none;
     background-color: transparent;
+}
+@media screen and (min-width:600px){
+    nav{
+        flex-direction: row;
+        align-items: center;
+        padding: 1% 5vw;
+    }
+    .nav-header{
+        padding: 0;
+    }
+    .nav-list__toggle{
+        display: none;
+    }
+    .nav-list{
+        max-height: none;
+        margin: 0;
+        background-color: transparent;
+        margin-left: auto;
+        padding-right: 0;
+    }
+    .nav-list__item{
+        float: left;
+    }
+    .nav-list__link{
+        color: var(--title-gray);
+    }
 }
 /*global*/
 .global{
@@ -87,7 +117,7 @@ nav{
     font-style: normal;
     font-weight: 600;
     font-size: 1.2rem;
-    width: 65vw;
+    width: 75%;
 }
 .ourwork-p{
     color: var(--description-gray);
@@ -103,6 +133,10 @@ nav{
     height: 47px;
     padding: 2%;
     border-radius: 12px;
+}
+.ourwork-email--w75{
+    width: 100%;
+    max-width: 350px;
 }
 .ourwork-email__input{
     flex-grow: 1;
@@ -127,6 +161,18 @@ nav{
     border-radius: 12px;
     padding: 0 15px;
 }
+@media screen and (min-width:600px){
+    .ourwork{
+        width: 50%;
+    }
+    .ourwork-h1{
+        font-size: 2rem;
+        width: 100%;
+    }
+    .ourwork-p{
+        font-size: 0.83em;
+    }
+}
 /*banner*/
 .banner{
     width: 100%;
@@ -143,6 +189,10 @@ nav{
     font-weight: 600;
     font-size: 1.2rem;
     width: 65vw;
+}
+.services-deck{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
 }
 .services-card{
     max-width: 350px;
@@ -190,9 +240,32 @@ nav{
     border: none;
     padding: 10px;
 }
-.services-card__btn:hover, .services-card__btn:active{
+.services-card:hover > .services-card__btn,.services-card__btn:hover, .services-card__btn:active{
     background-color: var(--blue-text);
     color: white;
+    cursor: pointer;
+}
+@media screen and (min-width:600px){
+    .services-h1{
+        font-size: 2rem;
+        width: 50%;
+    }
+    .services-deck{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5%;
+    }
+    .services-card{
+        width: 100%;
+        min-width: 250px;
+    }
+    .services-card__icon{
+        width: 3em;
+        height: 3em;
+    }
+    .services-card__title{font-size: 1.5rem;}
+    .services-card__desc{
+        font-size: 16px;
+    }
 }
 /*design*/
 .design-h1{
@@ -238,7 +311,29 @@ nav{
     color: var(--blue-text);
     margin-bottom: 10%;
 }
+@media screen and (min-width:600px){
+    .card-deck{
+        grid-template-columns: repeat(2, auto);
+        column-gap: 8%;
+    }
+    .card{
+        margin-bottom: 0;
+    }
+    .card:nth-of-type(odd){
+        margin-top: 30%;
+    }
+    .card-img{
+        max-width: 534px;
+    }
+}
 /*team*/
+.team{
+    display: flex;
+    flex-direction: column;
+}
+.team-desc{
+    margin-bottom: 8%;
+}
 .team-h1{
     margin-block-start: 0.5rem;
     margin-block-end: 0.5rem;
@@ -260,7 +355,7 @@ nav{
 }
 .team-block{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
     gap: 8px;
 }
 .team-block__group{
@@ -273,9 +368,27 @@ nav{
     height: auto;
     border-radius: 24px;
 }
+.team-block__img--85{
+    width: 85%;
+}
+.team-block__img--90{
+    width: 90%;
+}
 .my-auto{
     margin-top: 45%;
 }
+@media screen and (min-width:600px){
+    .team{
+        flex-direction: row;
+        align-items: center;
+    }.team-desc{
+        max-width: 50%;
+    }
+    .team-p, .team-h1{
+        width: 65%;
+    }
+}
+/*review*/
 .review{
     margin-block-start: 10%;
     margin-block-end: 10%;
@@ -294,6 +407,7 @@ nav{
 .review-card__img{
     width: 25%;
     height: auto;
+    border-radius: 12px;
 }
 .review-card__info{
     flex-grow: 1;
@@ -313,4 +427,50 @@ nav{
     font-size: 18px;
     line-height: 27px;
     color: var(--btntext-gray);
+}
+@media screen and (min-width:600px){
+    .review-quote{
+        width: 75%;
+    }
+    .review-card__img{
+        width: 15%;
+    }
+}
+/*footer*/
+footer{
+    background-color: #100E1D;
+    padding: 5% 5vw;
+     /*display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10%;*/
+}
+.footer-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8vh;
+}
+.footer-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: var(--bg-gray);
+    font-weight: normal;
+    font-size: 18px;
+}
+.footer-bottom{
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    color: #A9A9A9;
+    margin-top: 8vh;
+}
+.footer-social{
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 53px;
+    color: var(--bg-gray);
 }
