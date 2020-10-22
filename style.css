@@ -217,7 +217,7 @@ nav{
     vertical-align: middle;
     text-align: center;
     color: var(--bg-gray);
-    border-radius: 16px;
+    border-radius: 12px;
 }
 .services-card__icon--blue{background-color: var(--blue-text);}
 .services-card__icon--green{background-color: var(--green-text);}
