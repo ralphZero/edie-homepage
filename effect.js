@@ -1,3 +1,20 @@
+function isInViewport(element){
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+(function(){
+    let card = document.querySelector('.services-deck');
+    document.addEventListener('scroll', (e) => {
+        console.log('Is in viewport ? '+isInViewport(card));
+    }, false);
+})();
+
 (function(){
     let toggle = document.querySelector('.nav-list__toggle');
 
