@@ -23,11 +23,6 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
-@media screen and (min-width:600px){
-    body{
-        padding: 0 5vw;
-    }
-}
 nav{
     display: flex;
     flex-direction: column;
@@ -102,6 +97,11 @@ nav{
 .global{
     padding: 10% 5vw 0;
 }
+@media screen and (min-width:600px){
+    .global{
+        padding: 5% 10vw 0;
+    }
+}
 /*ourwork*/
 .ourwork{padding: 0 5vw 0;}
 .ourwork-small{
@@ -135,7 +135,7 @@ nav{
     border-radius: 12px;
 }
 .ourwork-email--w75{
-    width: 100%;
+    width: 80%;
     max-width: 350px;
 }
 .ourwork-email__input{
@@ -160,6 +160,7 @@ nav{
     border: none;
     border-radius: 12px;
     padding: 0 15px;
+    width: 60px;
 }
 @media screen and (min-width:600px){
     .ourwork{
@@ -171,6 +172,9 @@ nav{
     }
     .ourwork-p{
         font-size: 0.83em;
+    }
+    .ourwork-email{
+        width: 80%;
     }
 }
 /*banner*/
@@ -193,6 +197,7 @@ nav{
 .services-deck{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
 }
 .services-card{
     max-width: 350px;
@@ -250,21 +255,28 @@ nav{
         font-size: 2rem;
         width: 50%;
     }
-    .services-deck{
-        grid-template-columns: repeat(3, 1fr);
-        gap: 5%;
-    }
     .services-card{
         width: 100%;
-        min-width: 250px;
+        min-width: 240px;
     }
     .services-card__icon{
-        width: 3em;
-        height: 3em;
+        width: 2em;
+        height: 2em;
     }
     .services-card__title{font-size: 1.5rem;}
     .services-card__desc{
         font-size: 16px;
+    }
+}
+@media screen and (min-width: 600px){
+    .services-deck{
+        grid-template-columns: repeat(2, auto);
+        gap: 2%;
+    }
+}
+@media screen and (min-width: 850px){
+    .services-deck{
+        grid-template-columns: repeat(3, auto);
     }
 }
 /*design*/
@@ -280,6 +292,7 @@ nav{
 .card-deck{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
 }
 .card{
     display: flex;
@@ -308,22 +321,34 @@ nav{
 }
 .design-more{
     display: flex;
+    justify-content: flex-end;
     color: var(--blue-text);
     margin-bottom: 10%;
 }
 @media screen and (min-width:600px){
+    .design-h1{
+        font-size: 2rem;
+        width: 50%;
+    }
     .card-deck{
         grid-template-columns: repeat(2, auto);
-        column-gap: 8%;
+        column-gap: 5vw
     }
     .card{
         margin-bottom: 0;
+        justify-self: start;
     }
     .card:nth-of-type(odd){
         margin-top: 30%;
+        justify-self: end;
     }
     .card-img{
-        max-width: 534px;
+        max-width: 434px;
+    }
+}
+@media screen and (min-width:1024px){
+    .card-deck{
+        column-gap: 5vw;
     }
 }
 /*team*/
@@ -381,7 +406,13 @@ nav{
     .team{
         flex-direction: row;
         align-items: center;
-    }.team-desc{
+        justify-content: center;
+    }
+    .team-h1{
+        font-size: 2rem;
+        width: 50%;
+    }
+    .team-desc{
         max-width: 50%;
     }
     .team-p, .team-h1{
@@ -414,6 +445,7 @@ nav{
     display: flex;
     flex-direction: column;
     margin-left: 5%;
+    justify-content: center;
 }
 .review-card__name{
     font-style: normal;
@@ -433,16 +465,16 @@ nav{
         width: 75%;
     }
     .review-card__img{
-        width: 15%;
+        width: 10%;
+    }
+    .review-card__info{
+        margin-left: 2%;
     }
 }
 /*footer*/
 footer{
     background-color: #100E1D;
     padding: 5% 5vw;
-     /*display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10%;*/
 }
 .footer-top{
     display: flex;
@@ -473,4 +505,9 @@ footer{
     font-size: 36px;
     line-height: 53px;
     color: var(--bg-gray);
+}
+@media screen and (min-width:600px){
+    .footer-top{
+        flex-direction: row;
+    }
 }
