@@ -1,0 +1,75 @@
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.ourwork--animation-0{
+    animation-name: fadeIn;
+    animation-direction: normal;
+    animation-duration: 800ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-delay: 400ms;
+}
+.ourwork--animation-1{
+    animation-name: fadeIn;
+    animation-direction: normal;
+    animation-duration: 800ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-delay: 800ms;
+}
+/**/
+@keyframes slideToRight{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    70%{
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.services-card--opacity-0{
+    opacity: 0;
+}
+
+.services-card--animation-0{
+    overflow-x: none;
+    animation-name: slideToRight;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+.services-card--animation-1{
+    overflow-x: none;
+    animation-name: slideToRight;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    animation-delay: 500ms;
+}
+.services-card--animation-2{
+    overflow-x: none;
+    animation-name: slideToRight;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+}
