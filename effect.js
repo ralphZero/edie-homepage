@@ -7,10 +7,16 @@ function isInViewport(element){
     );
 }
 
+function hasLeftViewport(element){
+    const rect = element.getBoundingClientRect();
+    return rect.bottom < 0;
+}
+
 (function(){
     const deck = document.querySelector('.services-deck');
     let card = document.querySelectorAll('.services-card');
     let design_cards = document.querySelectorAll('.card');
+    let team_block = document.querySelector('.team-block');
 
     document.addEventListener('scroll', (e) => {
         if(isInViewport(deck)){
@@ -20,7 +26,6 @@ function isInViewport(element){
         }
     }, false);
 
-    let test = document.querySelector('#test');
     document.addEventListener('scroll',(e)=>{
         for(let i=0, d=design_cards.length;  i < d; i++){
             if(isInViewport(design_cards[i])){
@@ -28,6 +33,15 @@ function isInViewport(element){
             }
         }
     }, false);
+
+     /*document.addEventListener('scroll', (e)=>{
+        if(isInViewport(team_block)){
+            let team_img = team_block.getElementsByTagName('img');
+            team_img[0].classList.add('.team-block--animation-0');
+           team_img[1].classList.add('.team-block--animation-1');
+            team_img[2].classList.add('.team-block--animation-2');
+        }
+    }, false);*/
 
     window.onload = (e)=>{
 

@@ -131,3 +131,51 @@
     animation-fill-mode: both;
     animation-delay: 100ms;
 }
+/**/
+@keyframes fadeInPopUp{
+    0%{
+        opacity: 0;
+    }
+    65%{
+        opacity: .4;
+    }
+    100%{
+        opacity: 1;
+        filter: invert();
+    }
+}
+
+.team-block__img--aa{    
+    transform-origin: center;
+    transform: rotate(360deg);
+    transition: transform 0.5s ease;
+}
+
+.team-block--animation-0{
+    animation-name: fadeInPopUp;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+.team-block--animation-1{
+    animation-name: fadeInPopUp;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    animation-delay: 100ms;
+}
+
+.team-block--animation-2{
+    animation-name: fadeInPopUp;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    animation-delay: 100ms;
+}
