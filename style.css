@@ -147,10 +147,7 @@ nav{
     height: 47px;
     padding: 2%;
     border-radius: 12px;
-}
-.ourwork-email--w75{
-    width: 80%;
-    max-width: 350px;
+    width: 350px;
 }
 .ourwork-email__input{
     flex-grow: 1;
@@ -533,5 +530,8 @@ footer{
 @media screen and (min-width:600px){
     .footer-top{
         flex-direction: row;
+    }
+    .footer-contact{
+        width: 30%;
     }
 }
