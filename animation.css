@@ -48,7 +48,7 @@
     overflow-x: none;
     animation-name: slideToRight;
     animation-iteration-count: 1;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-direction: normal;
     animation-timing-function: ease;
     animation-fill-mode: both;
@@ -57,7 +57,7 @@
     overflow-x: none;
     animation-name: slideToRight;
     animation-iteration-count: 1;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-direction: normal;
     animation-timing-function: ease;
     animation-fill-mode: both;
@@ -67,9 +67,67 @@
     overflow-x: none;
     animation-name: slideToRight;
     animation-iteration-count: 1;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-direction: normal;
     animation-timing-function: ease;
     animation-fill-mode: both;
     animation-delay: 1s;
+}
+/**/
+@keyframes fadeInSlideUp{
+    0%{
+        transform: translateY(150px);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.3;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.card-opacity{
+    opacity: 0;
+}
+
+.card--animation-0{
+    animation-name: fadeInSlideUp;
+    animation-iteration-count: 1;
+    animation-duration: 700ms;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    animation-delay: 400ms;
+}
+
+.card--animation-1{
+    animation-name: fadeInSlideUp;
+    animation-iteration-count: 1;
+    animation-duration: 700ms;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    animation-delay: 100ms;
+}
+
+.card--animation-2{
+    animation-name: fadeInSlideUp;
+    animation-iteration-count: 1;
+    animation-duration: 700ms;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    animation-delay: 400ms;
+}
+
+.card--animation-3{
+    animation-name: fadeInSlideUp;
+    animation-iteration-count: 1;
+    animation-duration: 700ms;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    animation-delay: 100ms;
 }
