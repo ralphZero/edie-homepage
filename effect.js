@@ -17,6 +17,7 @@ function hasLeftViewport(element){
     let card = document.querySelectorAll('.services-card');
     let design_cards = document.querySelectorAll('.card');
     let team_block = document.querySelector('.team-block');
+    let team = document.querySelector('.team');
 
     document.addEventListener('scroll', (e) => {
         if(isInViewport(deck)){
@@ -34,14 +35,17 @@ function hasLeftViewport(element){
         }
     }, false);
 
-     /*document.addEventListener('scroll', (e)=>{
+    document.addEventListener('scroll', (e)=>{
+        if(isInViewport(team)){
+            team.firstElementChild.classList.add('team--animation');
+        }
         if(isInViewport(team_block)){
             let team_img = team_block.getElementsByTagName('img');
-            team_img[0].classList.add('.team-block--animation-0');
-           team_img[1].classList.add('.team-block--animation-1');
-            team_img[2].classList.add('.team-block--animation-2');
+            team_img[0].classList.add('team-block--animation-0');
+            team_img[1].classList.add('team-block--animation-1');
+            team_img[2].classList.add('team-block--animation-2');
         }
-    }, false);*/
+    }, false);
 
     window.onload = (e)=>{
 
@@ -60,6 +64,11 @@ function hasLeftViewport(element){
         for(let i=0; i <  design_cards.length; i++){
             design_cards[i].classList.add('card-opacity');
         }
+
+        document.querySelector('.team-desc').style.opacity = 0;
+        document.querySelectorAll('.team-block__img').forEach(item => {
+            item.classList.add('card-opacity');
+        });
     };
 })();
 
